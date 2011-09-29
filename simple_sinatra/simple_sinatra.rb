@@ -1,3 +1,5 @@
+# #### _Part of [ITP Web Dev Workshop](http://itpwebdev.github.com) Week 03 Ruby + HTTP = Sinatra._
+
 # [Sinatra](http://www.sinatrarb.com/) is a DSL (domain specific language) for writing web apps in Ruby.
 
 # To use Sinatra you first need Ruby.
@@ -37,3 +39,16 @@ end
 #     ruby simple_sinatra.rb
 #
 # Point your browser to `http://localhost:4567/`
+
+# A web app with only one page is pretty boring. Let's add another page.
+
+# This is our about page, accessed through `http://localhost:4567/about`.
+get "/about" do
+  # We'll use some HTML markup here. Since Ruby only returns the last
+  # line of a block we'll save our desired output to a variable `output`.
+  output = "<h1>About</h1>"
+  output += "<p>I wrote this web page with Sinatra, and no templates.</p>"
+  output += "<p>Thus it was rather grueling to write html.</p>"
+  # Then place `output` in the last line of the block.
+  output
+end
