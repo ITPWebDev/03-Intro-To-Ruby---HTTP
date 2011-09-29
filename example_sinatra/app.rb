@@ -5,13 +5,17 @@
 #
 # then point your browser to http://localhost:4567
 
-require 'rubygems' # use gems
-require 'sinatra' # use the sinatra gem
+# Tell Ruby that you want to use gems
+require 'rubygems'
+# Then ask to use the Sinatra gem.
+require 'sinatra'
 
+# Define the root route, for `http://localhost:4567/`.
 get "/" do
   "Hello World!"
 end
 
+# This route accepts a parameter, called `:name`.
 get "/:name" do
   # Wrap the route parameter in H1 tags
   output = "<h1>"+params[:name]+"</h1>"
