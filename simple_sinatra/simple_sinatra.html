@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <title>simple_sinatra.rb</title>
+  <link rel="stylesheet" href="http://jashkenas.github.com/docco/resources/docco.css">
+</head>
+<body>
+<div id='container'>
+  <div id="background"></div>
+  <table cellspacing=0 cellpadding=0>
+  <thead>
+    <tr>
+      <th class=docs><h1>simple_sinatra.rb</h1></th>
+      <th class=code></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr id='section-1'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-1">&#182;</a>
+        </div>
+        <p><a href="http://www.sinatrarb.com/">Sinatra</a> is a DSL (domain specific language) for writing web apps in Ruby.</p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre></pre></div>
+      </td>
+    </tr>
+    <tr id='section-2'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-2">&#182;</a>
+        </div>
+        <p>To use Sinatra you first need Ruby.
+Then open up the Terminal and install Sinatra like so:</p>
+
+<pre><code>gem install sinatra
+</code></pre>
+
+<p>Then make a new folder and create a file called</p>
+
+<pre><code>simple_sinatra.rb
+</code></pre>
+
+<p>Open up that file in your text editor.</p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre></pre></div>
+      </td>
+    </tr>
+    <tr id='section-3'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-3">&#182;</a>
+        </div>
+        <p>Tell Ruby to look at all of our gems first and then look for the Sinatra gem.</p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre><span class="nb">require</span> <span class="s1">&#39;rubygems&#39;</span>
+<span class="nb">require</span> <span class="s1">&#39;sinatra&#39;</span></pre></div>
+      </td>
+    </tr>
+    <tr id='section-4'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-4">&#182;</a>
+        </div>
+        <p>A web application would be terrible without any URLs.
+A URL is a route, it tells the server where to go.
+With Sinatra routes are defined in blocks that start with
+the HTTP verb. We&rsquo;ll write the first route,
+<code>&ldquo;/&rdquo;</code> which is the landing page of most sites.</p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre></pre></div>
+      </td>
+    </tr>
+    <tr id='section-5'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-5">&#182;</a>
+        </div>
+        <p><code>get</code> is the type of HTTP request. The other types are <code>post</code>,
+<code>put</code> and <code>delete</code>. The <code>&ldquo;/&rdquo;</code> tells Sinatra what to respond
+to after the top level domain (.com, .net etc.).</p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre><span class="n">get</span> <span class="s2">&quot;/&quot;</span> <span class="k">do</span></pre></div>
+      </td>
+    </tr>
+    <tr id='section-6'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-6">&#182;</a>
+        </div>
+        <p>Inside the the block we can put pretty much any Ruby code.
+Like all Ruby blocks the last line of the block gets returned.</p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre>  <span class="s2">&quot;Hello World!&quot;</span></pre></div>
+      </td>
+    </tr>
+    <tr id='section-7'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-7">&#182;</a>
+        </div>
+        <p>End the block</p>
+      </td>
+      <td class=code>
+        <div class='highlight'><pre><span class="k">end</span></pre></div>
+      </td>
+    </tr>
+    <tr id='section-8'>
+      <td class=docs>
+        <div class="pilwrap">
+          <a class="pilcrow" href="#section-8">&#182;</a>
+        </div>
+        <p>Now we&rsquo;ve got the simplest web app.
+Launch the application with </p>
+
+<pre><code>ruby simple_sinatra.rb
+</code></pre>
+
+<p>Point your browser to <code>http://localhost:4567/</code></p>
+
+      </td>
+      <td class=code>
+        <div class='highlight'><pre></pre></div>
+      </td>
+    </tr>
+  </table>
+</div>
+</body>
